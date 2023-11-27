@@ -1,0 +1,31 @@
+CREATE DATABASE IF NOT EXISTS sistema_sgc;
+
+USE sistema_sgc;
+
+CREATE TABLE IF NOT EXISTS usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    senha VARCHAR(255) NOT NULL,
+    loggedIn BOOLEAN DEFAULT false
+);
+
+CREATE TABLE IF NOT EXISTS Cliente (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    cnpj VARCHAR(14) NOT NULL,
+    cidade VARCHAR(255) NOT NULL,
+    uf VARCHAR(2) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS Contrato (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    ClienteID INT,
+    FOREIGN KEY (ClienteID) REFERENCES Cliente(id),
+    Vencimento INT NOT NULL,
+    ValorAtual DECIMAL(10, 2) NOT NULL,
+    Duracao INT NOT NULL,
+    PorcentagensReajuste VARCHAR(255),
+    Arquivo VARCHAR(255) 
+);
+

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Armazenamento de Contrato</title>
+
+    <!-- Inclua as folhas de estilo do Bootstrap (você pode ajustar a versão conforme necessário) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/sistema/html/TelaPrincipal/dashboard.html">Gerenciador de Contratos</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/sistema/html/CadastroCliente/FormularioCliente.html"
+                        id="btnCadCliente">Cadastro Cliente</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/sistema/html/Relatorio/relatorio.html" id="btnRelatorio">Relatorio
+                        Gerencial</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/sistema/html/Armazenar/armazenar.html" id="btnArmContrato">Armazenar
+                        Contrato</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5" style="width: 70%;">
+        <h2 class="mb-4">Armazenamento de Contrato</h2>
+
+        <!-- Formulário para enviar contrato -->
+        <div>
+            <div class="form-group mb-3">
+                <label for="nomeCliente">Nome do Cliente:</label>
+                <select class="form-control" id="nomeCliente">
+                    <!-- Add options dynamically from your database -->
+                    <option value="cliente1">Cliente 1</option>
+                    <option value="cliente2">Cliente 2</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+        
+            <div class="form-group mb-3">
+                <label for="valorContrato">Valor Atual do Contrato:</label>
+                <input type="text" class="form-control" id="valorContrato" placeholder="Digite o valor atual do contrato">
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="duracaoContrato">Duração do Contrato (em meses):</label>
+                <input type="number" class="form-control" id="duracaoContrato" placeholder="Digite a duração do contrato em meses">
+            </div>
+        
+            <div class="form-group mb-3">
+                <label for="vencimentoContrato">Data de Vencimento:</label>
+                <input type="date" class="form-control" id="vencimentoContrato">
+            </div>
+        
+            <div class="form-group mb-3">
+                <label for="arquivoContrato">Selecione o Contrato (PDF, DOCX, etc.):</label>
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="arquivoContrato">
+                    <label class="custom-file-label" for="arquivoContrato">Escolha o arquivo</label>
+                </div>
+            </div>
+        
+            <button type="submit" class="btn btn-primary">Enviar Contrato</button>
+        </div>
+        
+    </div>
+
+    <!-- Inclua os scripts do Bootstrap (jQuery e Popper.js são necessários para alguns recursos do Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

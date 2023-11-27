@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório Gerencial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .card {
+            margin-top: 20px;
+        }
+    </style>
+    <!-- Inclua a biblioteca jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/sistema/html/TelaPrincipal/dashboard.html">Gerenciador de Contratos</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/sistema/html/CadastroCliente/FormularioCliente.html"
+                        id="btnCadCliente">Cadastro Cliente</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/sistema/html/Relatorio/relatorio.html" id="btnRelatorio">Relatorio
+                        Gerencial</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/sistema/html/Armazenar/armazenar.html" id="btnArmContrato">Armazenar
+                        Contrato</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5" style="width: 70%;">
+        <h1>Relatório Gerencial</h1>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Clientes Cadastrados</h5>
+                            <p class="card-text">Quantidade: <span id="quantidadeClientes">0</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Contratos Armazenados</h5>
+                            <p class="card-text">Quantidade: <span id="quantidadeContratos">0</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Contratos que Irão Vencer no Próximo Mês</h5>
+                            <p class="card-text">Quantidade: <span id="contratosAVencer">0</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Faturamento Anual</h5>
+                            <p class="card-text">Valor: R$ <span id="faturamentoAnual">0,00</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Faturamento Quantitativo</h5>
+                            <p class="card-text">Quantidade: <span id="faturamentoQuantitativo">0</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Adicione seu código JavaScript para recuperar e exibir os dados dinâmicos aqui
+        // Você pode usar jQuery ou JavaScript puro para fazer requisições AJAX para obter os dados do servidor
+        // e atualizar os valores dentro dos elementos HTML.
+
+        // Exemplo fictício de atualização de valores (substitua isso pelos dados reais):
+        $('#quantidadeClientes').text(150);
+        $('#quantidadeContratos').text(75);
+        $('#contratosAVencer').text(10);
+        $('#faturamentoAnual').text('150.000,00');
+        $('#faturamentoQuantitativo').text(25);
+    </script>
+
+</body>
+
+</html>
